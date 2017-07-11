@@ -1,0 +1,27 @@
+.ui-panel-inner {
+    padding:0px; /*make the buttons flush edge to edge*/
+}
+
+.ui-controlgroup {
+    margin:0; /*make the buttons flush to the top*/
+}
+
+.txt-menu {
+    text-align: left! important;
+    font-size: 1em;
+}
+
+#header {
+    height:74px;
+    background-color: darkred;
+}
+
+#bars-button {
+    margin:7px;
+}
+
+.img-header {
+    margin: 1em;
+    height: 40px;
+    width: 60px;
+}

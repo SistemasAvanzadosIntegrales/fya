@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PromoZone&reg;</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome/css/font-awesome.min.css">
+   <!-- <link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.4.5.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/slideme.css">
+    <style>
+        /* following two viewport lines are equivalent to the meta viewport statement above, needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport {
+            width: 100vw;
+            zoom: 100%;
+        }
+        @viewport {
+            width: 100vw;
+            zoom: 100%;
+        }
+        @-ms-viewport {
+            user-zoom: fixed;
+        }
+        @viewport {
+            user-zoom: fixed;
+        }
+    </style>
+    <!--[if gte IE 9]> <style type="text/css"> .gradient { filter: none; } </style> <![endif]-->
+    <script src="js/app.js"></script><!-- recommended location of your JavaScript code relative to other JS files -->
+    <script src="js/init-app.js"></script>      <!-- for your init code, see README and file comments for details -->
+    <script src="xdk/init-dev.js"></script><!-- normalizes device and document ready events, see README for details -->
+    <!--<script src="js/bootstrap.min.js"></script>-->
+  
+    
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    
+    <!--<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>-->
+
+    <!--<script src="http://code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+    <script src="https://cdn.rawgit.com/driftyco/ng-cordova/master/dist/ng-cordova.min.js"></script>
+    <script src="https://cdn.rawgit.com/nraboy/ng-cordova-oauth/master/dist/ng-cordova-oauth.min.js"></script>-->
+
+    
+    <!--<script type="text/javascript" src="cordova_plugins.js"></script>-->
+</head>
+
+<body>
+
+    <!--==========================================================================
+                                        LOGIN
+    ========================================================================== --> 
+
+    <!--************************** Header ************************************ -->
+    <!--<div ng-app="facebookApp">
+        <div ng-controller="mainCtrl">-->
+    <!-- COMENTADO POR FER VILLARRUEL 
+            <div  data-role="page" style=" background-image: url(../css/img/bgElemento.png) !important; " id="ingreso" data-title="">
+                <div id="header">
+                    <div id="logo">
+                        <a href="#panel"><img src="css/img/logo.png"></a>
+                    </div>
+                </div>-->
+
+                <!-- ****************************** Busqueda ************************* -->
+
+                <!-- ************************** Contenido **************************** -->
+<!-- COMENTADO POR FER VILLARRUEL 
+                <div role="main" style="background-image: url(../css/img/bgElemento.png) !important;"  data-role="none">
+                    <br>
+                    <div id="ingresoForm" class="margen">
+
+                            <label for="filtertext" class="fa fa-user c_ama f16 w100 center "> Ingresa con tu usuario y contraseña </label>
+                            <input type="email" id="lngusuario" name="lngusuario" placeholder="Correo electrónico">
+                            <input type="password" id="lngclave" name="lngclave"  placeholder="Contraseña">
+                            <button class="amarillo"id="sesion" >Ingresar</button>
+                        
+                            <button onclick="login()" class="amarillo" ><span class="fa fa-facebook-official"></span> Ingresar con Facebook</button>
+                            
+                            <a class="blanco" onclick="javascript:window.location.hash='#registro'">Registrarme</a> <a class="blanco">|</a>
+                           
+                            <a class=" blanco" onclick="javascript:navigator.app.exitApp();">Salir</a>
+                    </div>
+                    
+                </div>
+             <div id="fondo"><img style="float:right; height:100%;" src="css/img/bgElemento.png"> </div>
+            </div>
+-->
+            <!--==========================================================================
+                                                REGISTRO
+            ========================================================================== --> 
+
+            <!--************************** Header ************************************ -->
+<!-- COMENTADO POR FER VILLARRUEL 
+            <div  data-role="page" class="" id="registro" data-title="">
+                <div id="header">
+                    <div id="logo">
+                        <a href="#panel"><img src="css/img/logo.png"></a>
+                    </div>
+                </div>
+
+                <div role="main" class="back" data-role="none">
+
+
+                    <div id="ingresoForm">
+
+                            <label for="filtertext" class="fa fa-user c_ama f16 w100 center "> Completa los siguientes campos </label>
+                            <input type="text" id="regnombre" name="regnombre"  placeholder="Nombre">
+                            <input type="email" id="regusuario" name="regusuario" placeholder="Correo electrónico">
+                            <input type="password" id="regclave" name="regclave"  placeholder="Contraseña">
+                            <button class="amarillo" onclick="javascript:registrarUsuario()">Registrarme</button>
+                            <button class="amarillo" onclick="javascript:cancelarRegistro()">Cancelar</button>
+
+                    </div>
+
+                    
+
+                </div>
+            </div>
+-->
+            <!--==========================================================================
+                                                SELECCIONE ESTADO
+            ========================================================================== -->  
+
+            <!--****************************** Header ******************************** -->
+
+            <div  data-role="page"  id="estados" data-url="estados">
+                <div id="header">
+                    <div id="logo"> 
+                        <a href="#panel"><img src="css/img/logo.png"></a>
+                    </div>
+                    <a id="ahead" href="#menu" style=" color: #FFCC99 !important;" class=" c_ama fa fa-bars fa-2x "><br>
+                        <span class="f14 c_ama">Menu</span>
+                    </a>
+                    <!-- COMENTADO POR FER VILLARRUEL 
+                    <a id="ahead" href="#favorList" style=" color: #FFCC99 !important;" class="c_ama fa fa-star-o fa-2x lmFavorito"><br>
+                        <span class="f14 c_ama">Mis favoritos</span>
+                    </a> -->
+                    
+                    <a id="asistencia" href="#asistenciaList" style=" color: #FFCC99 !important;" class="c_ama fa fa-heart-o fa-2x lmFavorito"><br>
+                        <span class="f14 c_ama">Asistencias</span>
+                    </a>
+                </div>
+
+                <!-- ************************** Busqueda ***************************** -->
+
+                <div id="search">
+                    <div id="busqueda">
+                        <input data-role="none" class="field srcMain" value="" type="text" placeholder="Restaurantes, Bares, Servicios, etc"/>
+                        <a data-role="none" value="Enhanced" class="btn-busqueda" type="button" onclick="filtrar()"> <span class="fa fa-search fa fa-lg c_ama"></span> </a> 
+                    </div>
+                </div>
+
+                <!-- **************************** Contenido **************************** -->
+
+                <div role="main" class="back" data-role="none">
+                    
+
+                    <!-- Seleccione su estado -->
+                    <br>
+                    <div id="selectEstado" class="margen2">
+                        <form>
+                            <div id="slc" data-role="none" style="position:relative; margin-top:60px; float: left; width: 100%; bottom: 0px;">
+                                <select id="select-state" name="select-state" class="filterable-select">
+                                    <option value='0' selected=true>Selecciona un estado</option>
+                                </select>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- /Seleccione su estado --> 
+                      <div id="fondo2"><img style="float:right; margin-top:-8%; height:105%;" src="css/img/bgElemento.png"> </div>
+                </div>
+
+                <!-- ************************** Menu **************************************** -->
+
+                <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="menu">
+                    <ul data-role="listview"  class="red blanco">
+                        <li class="exitapp" onClick="javascript:navigator.app.exitApp();" data-icon="delete"><a href="#" data-rel="close">Cerrar aplicación</a></li>
+                        <!-- COMENTADO POR FER VILLARRUEL 
+                        <li onClick="javascript:salir();" data-icon="delete"><a href="#" data-rel="close">Logout</a></li>-->
+                        <li onClick="javascript:refrescarListaPromociones(1, 0);"> <a href="#"> <span class="fa fa-home">&nbsp;&nbsp;</span> Regresar al inicio </a> </li>
+                        <li onClick="javascript:cambiarEstado();"> <a href="#"><span class="fa fa-crosshairs">&nbsp;&nbsp;</span> Cambiar de estado </a> </li>
+                        <li class="buscaCercano" onClick="javascript:refrescarListaPromociones(categoriaSeleccionada, 1);"> <a href="#"><span class="fa fa-map-marker">&nbsp;&nbsp;</span>Buscar establecimientos <br/>
+                            <span style="margin-left:1em;">cercanos a mi posición</span></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--==========================================================================
+                                            LISTA DE PROMOCIONES
+            ========================================================================== -->  
+
+            <!--****************************** Header ******************************** -->
+
+            <div  data-role="page" class="" id="listapromociones" data-title="">
+                <div id="header">
+                    <div id="logo"> <a href="#panel"> <img src="css/img/logo.png"> </a> </div>
+                    <a id="ahead" href="#menu2" style=" color: #FFCC99 !important;" class="fa fa-bars fa-2x c_ama"><br>
+                        <span class="f14 c_ama">Menu</span>
+                    </a> 
+                    <!-- COMENTADO POR FER VILLARRUEL 
+                    <a id="ahead" href="#favorList" style=" color: #FFCC99 !important;" class="c_ama fa fa-star-o fa-2x lmFavorito "><br>
+                        <span class="f14 c_ama">Mis favoritos</span>
+                    </a> -->
+                    <a id="asistencia" href="#asistenciaList" style=" color: #FFCC99 !important;" class="c_ama fa fa-heart-o fa-2x lmFavorito"><br>
+                        <span class="f14 c_ama">Asistencias</span>
+                    </a>
+                </div>
+
+                <!-- ************************** Busqueda **************************************** -->
+
+                <div id="search">
+                    <div id="busqueda">
+                        <input data-role="none" class="field srcMain" value="" type="text" placeholder="Restaurantes, Bares, Servicios, etc">
+                        <a data-role="none" value="Enhanced" class="btn-busqueda" type="button" onclick="filtrar()"> <span class="fa fa-search fa fa-lg c_ama"></span> </a> 
+                    </div>
+                </div>
+
+                <!-- ***************************** Categorias *********************************** -->
+
+                <div id="navegacion">
+                        <ul>
+                            <li id="item" onClick="javascript:refrescarListaPromociones(1, 0);"> <a id="abutton" href="#" class="fa ct1 fa-shopping-cart"><br>
+                                <span class="f9">Tiendas</span> </a>
+                            </li>
+                            <div></div>
+                            <li id="item" onClick="javascript:refrescarListaPromociones(2, 0);"> <a id="abutton" href="#" class="fa ct2 fa-cutlery fa-lg"><br>
+                                <span class="f9">Bares & Restaurantes</span> </a>
+                            </li>
+                            <div></div>
+                            <li id="item" onClick="javascript:refrescarListaPromociones(3, 0);"> <a id="abutton" href="#" class="fa ct3 fa-users fa-lg"><br>
+                                <span class="f9">Servicios varios</span> </a> 
+                            </li>
+                            <div></div>
+                            <li id="item" onClick="javascript:refrescarListaPromociones(4, 0);"> <a id="abutton" href="#" class="fa ct4 fa-hospital-o fa-lg"><br>
+                                <span class="f9">Hoteles</span> </a> 
+                            </li>
+                            <div></div>
+                            <li id="item" onClick="javascript:refrescarListaPromociones(5, 0);"> <a id="abutton" href="#" class="fa ct5 fa-smile-o fa-lg"><br>
+                                <span class="f9">Entretenimiento</span> </a>
+                            </li>
+                        </ul>
+                </div>
+                <hr class="red">
+
+                <!-- ************************** Tipo Categoria ************************************ -->
+
+                <div> 
+                    <h2 class="f16 amarillo l_morado" style="text-shadow: none !important;" id="tituloCategoria"></h2>
+                </div>
+
+                <!-- ******************************* Contenido ************************************ -->
+
+                <div role="main" class="" data-role="none" id="listadoPromociones"> </div>
+
+                <!-- ************************** Menu  ************************************ -->
+
+                <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="menu2">
+                    <ul data-role="listview">
+                        <li class="exitapp" onClick="javascript:navigator.app.exitApp();" data-icon="delete"><a href="#" data-rel="close">Cerrar aplicación</a></li>
+                        <!-- COMENTADO POR FER VILLARRUEL 
+                        <li onClick="javascript:salir();" data-icon="delete"><a href="#" data-rel="close">Logout</a></li>-->
+                        <li onClick="javascript:refrescarListaPromociones(1, 0);"> <a href="#"> <span class="fa fa-home">&nbsp;&nbsp;</span> Regresar al inicio </a> </li>
+                        <li onClick="javascript:cambiarEstado();"> <a href="#location"><span class="fa fa-crosshairs">&nbsp;&nbsp;</span> Cambiar de estado </a> </li>
+                        <li class="buscaCercano" onClick="javascript:refrescarListaPromociones(categoriaSeleccionada, 1);"> <a href="#"><span class="fa fa-map-marker">&nbsp;&nbsp;</span>Buscar establecimientos <br/>
+                            <span style="margin-left:1em;">cercanos a mi posición</span></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <!--==========================================================================
+                                            LISTA DE FAVORITOS
+            ========================================================================== -->
+
+            <!--************************** Header ************************************ -->
+
+            <div  data-role="page" class="" id="listafavoritos" data-title="">
+                <div id="header">
+                    <div id="logo"> <a href="#panel"> <img src="css/img/logo.png"> </a> </div>
+                    <a id="ahead" href="#menu3" class="fa fa-bars fa-2x"><br>
+                        <span class="f14">Menu</span>
+                    </a>
+                </div>
+
+                <!-- ************************** Busqueda ************************* -->
+
+                <div id="search">
+                    <div id="busqueda">
+                        <input data-role="none" class="field srcMain" value="" type="text" placeholder="Restaurantes, Bares, Servicios, etc">
+                        <a data-role="none" value="Enhanced" class="btn-busqueda" type="button" onclick="filtrar()"> <span class="fa fa-search fa fa-lg c_ama"></span> </a> 
+                    </div>
+                </div>
+
+                <!-- ************************** Categorias ************************************ -->
+
+                <div id="navegacion">
+                    <ul>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(1, 0);"> <a id="abutton" href="#" class="fa ct1 fa-shopping-cart fa-lg"><br>
+                            <span class="f9">Tiendas</span> </a>
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(2, 0);"> <a id="abutton" href="#" class="fa ct2 fa-cutlery fa-lg"><br>
+                            <span class="f9">Bares & Restaurantes</span> </a>
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(3, 0);"> <a id="abutton" href="#" class="fa ct3 fa-users fa-lg"><br>
+                            <span class="f9">Servicios varios</span> </a>
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(4, 0);"> <a id="abutton" href="#" class="fa ct4 fa-hospital-o fa-lg"><br>
+                            <span class="f9">Hoteles</span> </a> 
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(5, 0);"> <a id="abutton" href="#" class="fa ct5 fa-smile-o fa-lg"><br>
+                            <span class="f9">Entretenimiento</span> </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="red">
+
+                <!-- ************************** Tipo ctegoria ********************************* -->
+
+                <div> 
+                    <h2 class="f16" style="text-shadow: none !important;" id="tituloCategoriaFavorito"></h2>
+                </div>
+
+                <!-- ************************** Contenido ************************************* -->
+
+                    <div role="main" class="" data-role="none" id="listadofavoritos"> </div>
+
+                <!-- ******************************* Menu  ************************************ -->
+
+                <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="menu3">
+                    <ul data-role="listview">
+                        <li class="exitapp" onClick="javascript:navigator.app.exitApp();" data-icon="delete"><a href="#" data-rel="close">Cerrar aplicación</a></li>
+                        <!-- COMENTADO POR FER VILLARRUEL 
+                        <li onClick="javascript:salir();" data-icon="delete"><a href="#" data-rel="close">Logout</a></li>-->
+                        <li onClick="javascript:refrescarListaPromociones(1, 0);"> <a href="#"> <span class="fa fa-home">&nbsp;&nbsp;</span> Regresar al inicio </a> </li>
+                        <li onClick="javascript:cambiarEstado();"> <a href="#location"><span class="fa fa-crosshairs">&nbsp;&nbsp;</span> Cambiar de estado </a> </li>
+                        <li class="buscaCercano" onClick="javascript:refrescarListaPromociones(categoriaSeleccionada, 1);"> <a href="#"><span class="fa fa-map-marker">&nbsp;&nbsp;</span>Buscar establecimientos <br/>
+                            <span style="margin-left:1em;">cercanos a mi posición</span></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--==========================================================================
+                                            ASISTENCIAS
+            ========================================================================== -->
+
+            <!--************************** Header ************************************ -->
+
+            <div  data-role="page" class="" id="asistenciaList" data-title="">
+                <div id="header">
+                    <div id="logo"> <a href="#panel"> <img src="css/img/logo.png"> </a> </div>
+                    <a id="ahead" href="#menu3" style=" color: #FFCC99 !important;" class="fa fa-bars fa-2x"><br>
+                        <span class="f14">Menu</span>
+                    </a>
+                    <a id="asistencia" href="#asistenciaList" style=" color: #FFCC99 !important;" class="c_ama fa fa-heart-o fa-2x lmFavorito"><br>
+                        <span class="f14 c_ama">Asistencias</span>
+                    </a>
+                </div>
+
+                <!-- ************************** Busqueda ************************* -->
+
+                <div id="search">
+                    <div id="busqueda">
+                        <input data-role="none" class="field srcMain" value="" type="text" placeholder="Restaurantes, Bares, Servicios, etc">
+                        <a data-role="none" value="Enhanced" class="btn-busqueda" type="button" onclick="filtrar()"> <span class="fa fa-search fa fa-lg c_ama"></span> </a> 
+                    </div>
+                </div>
+
+                <!-- ************************** Categorias ************************************ -->
+
+                <!--<div id="navegacion">
+                    <ul>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(1, 0);"> <a id="abutton" href="#" class="fa ct1 fa-shopping-cart fa-lg"><br>
+                            <span class="f9">Tiendas</span> </a>
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(2, 0);"> <a id="abutton" href="#" class="fa ct2 fa-cutlery fa-lg"><br>
+                            <span class="f9">Bares & Restaurantes</span> </a>
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(3, 0);"> <a id="abutton" href="#" class="fa ct3 fa-users fa-lg"><br>
+                            <span class="f9">Servicios varios</span> </a>
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(4, 0);"> <a id="abutton" href="#" class="fa ct4 fa-hospital-o fa-lg"><br>
+                            <span class="f9">Hoteles</span> </a> 
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(5, 0);"> <a id="abutton" href="#" class="fa ct5 fa-smile-o fa-lg"><br>
+                            <span class="f9">Entretenimiento</span> </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="red">-->
+
+                <!-- ************************** Tipo ctegoria ********************************* -->
+
+                <div> 
+                    <h2 class="f16 amarillo l_morado" style="text-shadow: none !important;" id="tituloAsistencia">Listado de Asistencias</h2>
+                </div>
+
+                <!-- ************************** Contenido ************************************* -->
+
+                    
+                
+                    <div role="main" class="" data-role="none" id="listadoAsistencias">
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-01.png"></div>
+                            <div class="labelAssistencia">AMBULANCIA </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    En caso de accidente o emergencia médica del titular o sus beneficiarios comunícate al 
+                                    <b>01 800 704 5555</b>, Quality Assist coordinará y organizará el envío de una ambulancia.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Límite de cobertura de $ 1,500.00<br/>
+                                    2 eventos anuales
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+                                </p>
+                            </div>
+                        <hr>
+
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-02.png"></div>
+                            <div class="labelAssistencia">ORIENTACIÓN MÉDICA TELEFÓNICA </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    Información las 24 hrs los 365 días del año sobre uso de medicamentos, efectos secundarios, síntomas de enfermedades, malestares menores, medidas sanitarias entre otras.
+                                </p>
+
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-03.png"></div>
+                            <div class="labelAssistencia">DESCUENTOS Y REFERENCIAS MÉDICAS </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    El titular y sus beneficiarios tendrán acceso a la red de descuentos médicos comunicándose al 57747 9102 o 01 800 704 5555 para que uno de nuestros operadores le binde la información del centro mas cercano a su ubicación, recibiendo grandes beneficios en sus compras, consultas médicas, en las clínicas, hospitales, farmacias y laboratorios afiliados. Con descuentos que van desde el 5% hasta el 30% dependiendo el comercio. 
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-04.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA MÉDICA A DOMICILIO </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    Contamos con médicos de primer nivel para brindarle consulta médica en el lugar de su residencia. Este servicio se brindará en caso de que no sea una emergencia médica o que el usuario no se pueda trasladar por algún impedimento a un consultorio o clínica.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Primer servicio sin costo, a partir del 2º servicio costo de $200.00 por concepto de copago. <br/>
+                                    2 eventos anuales
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Primeros dos servicios sin costo a partir del 3er servicio costo de $200.00 por concepto de copago.<br/>
+                                    Sin límite de eventos
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-05.png"></div>
+                            <div class="labelAssistencia">GASTOS FUNERARIOS </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    En caso de que el titular o sus beneficiarios fallezcan por enfermedad o accidente, Quality Assist organizará el servicio funerario consistente en los trámites administrativos y legales necesarios así como los traslados dentro de la misma ciudad que se requieran en carroza fúnebre, estética del cuerpo, capilla para velación, ataúd y traslado al cementerio. A petición expresa de los deudos, incluye cremación y urna para las cenizas.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Límite de cobertura de $ 15,000.00 <br/>
+                                    2 eventos anuales
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Límite de cobertura de $ 25,000.00 <br/>
+                                    2 eventos anuales
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                        
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-06.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA DENTAL </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    Comunícate a nuestro centro de contacto y agenda una cita en  nuestra red de Consultorios afiliados a Quality Assist donde podrás recibir descuentos de hasta el 30% en más de 150 procedimientos  y una limpieza dental una vez terminado el tratamiento, aplicación de flúor (a niños menores de 12 años) y radiografías periapicales de diagnóstico (las necesarias) GRATIS.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-07.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA VISIÓN </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    Ahora cuentas con acceso al Plan Delta o Plan Gama plus cuando el requieras servicios oftalmológicos podrán acceder a la red de ópticas sólo llámanos y te indicaremos cual es la sucursal afiliada más cercana a tu ubicación.
+                                    <br/>
+                                    - Plan Delta: armazón, micas graduadas terminadas y estuche por $299.00
+                                    <br/>
+                                    - Plan Gama Plus: armazón, micas graduadas terminadas y estuche por $699.00
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-08.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA HOGAR</div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    En caso de una situación de emergencia en el domicilio del titular, Quality Assist enviará según el caso, a un plomero, cerrajero, vidriero o electricista  en un tiempo máximo de 90 minutos para que repare la avería. Está asistencia esta disponible las 24 horas del día los 365 días del año.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Límite de cobertura de $ 600.00 <br/>
+                                    2 servicios de cada especialidad durante la vigencia anual
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Límite de cobertura de $ 1,000.00 <br/>
+                                    2 servicios de cada especialidad durante la vigencia anual
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-09.png"></div>
+                            <div class="labelAssistencia">ORIENTACIÓN LEGAL TELEFÓNICA </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    Cuando el titular o sus beneficiarios, necesiten orientación legal podrán consultar telefónicamente al cuerpo de abogados de Quality Assist, para recibir asesoría respecto a: contratos, compraventa de bienes, arrendamiento, propiedad, testamentos, títulos de crédito, divorcio, patria potestad, alimentos y derecho penal.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-10.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA LEGAL POR  ROBO</div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    Si el titular o sus beneficiarios sufre en su domicilio o como  transeúnte un robo, Quality Assist enviará a uno de sus abogados para que ayude y asesore  al usuario en la estrategia legal y tramitología a seguir.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-11.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA RESIDENCIAL</div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    
+                                    Cuando el inmueble donde habita el titular sufra daños ocasionados por una catástrofe natural que lo haga inhabitable, Quality Assist se hará cargo de los siguientes servicios hasta los límites contratados.
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Hospedaje  hasta por siete días  hasta por un límite de $5,000.00<br/>
+                                    Mudanza hasta por  un límite de $ 1,000.00<br/>
+                                    Un evento por catástrofe natural
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Hospedaje  hasta por siete días  hasta por un límite de $10,000.00<br/>
+                                    Mudanza hasta por  un límite de $ 1,500.00<br/>
+                                    Un evento por catástrofe natural
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-12.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA DISPOSITIVOS DIGITALES </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    El titular y sus beneficiarios podrán solicitar vía telefónica soporte tecnológico para smartphone, tablets y otros dispositivos digitales. Nuestra área técnica establecerá una sesión remota con el equipo del usuario para que pueda solventarse su problemática.
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-13.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA VIAL </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    ENVIÓ DE GRÚA CON PRECIOS PREFERENCIALES<br/>
+                                    En caso de que el automóvil propiedad del beneficiario no pueda continuar su marcha a causa de una avería mecánica, eléctrica o derivada de siniestros naturales, Quality Assist organizará el servicio de remolque del vehículo hasta el taller más cercano designado por el usuario, a precios preferenciales.<br/><br/>
+                                    Si el usuario requiere de auxilio en: paso de corriente a la batería, cambio de llanta, abasto de gasolina (hasta 10 litros con cargo al usuario), referencias de talleres mecánicos (horario, ubicación y concertación de una cita), Quality Assist enviará personal especializado para auxiliar al usuario.
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Quality Assist se obliga a conseguirle un precio preferencial en servicio de arrastre<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Quality Assist se obliga a conseguirle un precio preferencial en el servicio de arrastre por  $350.00 dentro de la misma localidad<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-14.png"></div>
+                            <div class="labelAssistencia">GESTORÍA: ASISTENCIA TELEFÓNICA</div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    Cuando el titular tenga dudas de trámites administrativos que estén relacionados con su gestoría, ponemos a su disposición a nuestros especialistas quienes le brindarán asistencia telefónica sobre temas como: Obtención de copias de Actas de Nacimiento, Matrimonio y Defunción, Certificado de Adquisición o Enajenación de Bienes Inmuebles (No propiedad), reposición de Cédula Profesional, entre otras.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-15.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA NUTRICIONAL TELEFÓNICA </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                        Cuando el titular o sus beneficiarios deseen conocer temas específicos en el área de nutrición como: cálculo del peso ideal, masa corporal, diseño de dietas o desórdenes alimenticios, Quality Assist pondrá a disposición del usuario un especialista para que sea consultado telefónicamente o vía correo electrónico las veces que sea necesario.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-16.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA FITNESS TELEFÓNICA </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                        Por medio de su personal especializado en acondicionamiento fitness Quality Assist proporcionara al usuario la asesoría necesaria de forma telefónica sobre problemas o dudas que tenga y estén relacionadas con el acondicionamiento físico como: adaptaciones fisiológicas derivadas de la práctica del ejercicio, resistencia, fuerza, tono muscular, medición de los avances físicos, medición del índice de masa muscular, porcentaje de grasa  y referencia de cadenas de gimnasios, horarios, precios y promociones.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-17.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA PSICOLÓGICA TELEFÓNICA</div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                        Cuando el titular o sus beneficiarios requieran orientación en temas relacionados con desarrollo individual, prevención de trastornos psicológicos, consejos para resolver problemas en pareja, apoyo a nivel familiar , ayuda en duelo y perdidas emocionales, Quality Assist brindará asesoría telefónica por medio de su red de psicólogos para que el usuario pueda  recibir la ayuda profesional para atender su padecimiento.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-18.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA EDUCATIVA TELEFÓNICA</div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                        Cuando los hijos del titular, tengan alguna duda sobre tareas escolares en materias como: matemáticas, español, química, física, biología, o ciencias sociales podrán consultar vía telefónica a los docentes de Quality Assist, quienes orientarán al escolar sobre el tema en particular, además de obtener bibliografía, tutoriales o referencia de páginas web. Este servicio está disponible para los estudiantes de nivel primaria a preparatoria.
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-19.png"></div>
+                            <div class="labelAssistencia">CLUB DE DESCUENTOS </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                    Acceder a importantes descuentos y beneficios de manera tangible. Contamos con 235 cadenas de prestigio con convenio a nivel nacional.
+
+                                    Es muy importante que antes de pedir tu cuenta o realizar tu compra consultes los términos condiciones y vigencia de los establecimientos en el sitio <a href="http://fya.promo-zone.com.mx" target="_blank">fya.promo</a> o en la APP móvil. Solicita tu descuento mostrando los sellos que aparece al reverso de tu tarjeta, recuerda que en algunos casos deberás presentar un cupón que podrás encontrar en el sitio <a href="http://fya.promo-zone.com.mx" target="_blank">fya.promo</a>
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    Sin límite de eventos
+
+
+                                </p>
+                            </div>
+                        <hr>
+                        
+                            <div class="imgAssistencia"> <img src="img/asistencias/app-20.png"></div>
+                            <div class="labelAssistencia">ASISTENCIA SEGUNDA OPINIÓN MEDICA </div>
+                            <div class="descripcionAssistencia">
+                                <p>
+                                        En caso de que el titular o sus beneficiarios requieran obtener una segunda opinión médica, información sobre el diagnóstico y métodos terapéuticos disponibles a nivel internacional, Quality Assist programará una cita para consulta a través de una videoconferencia con un médico especialista en Estado Unidos, quien brindará al beneficiario una segunda opinión médica.
+
+                                </p>
+                                <h6>PROGRAMA DE ASISTENCIA F&A VIP</h6>
+                                <p>
+                                    Sin límite de cobertura<br/>
+                                    1 evento por padecimiento
+
+
+
+                                </p>
+                            </div>
+                        <hr>
+                </div>   
+                            
+
+                <!-- ******************************* Menu  ************************************ -->
+
+                <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="menu3">
+                    <ul data-role="listview">
+                        <li class="exitapp" onClick="javascript:navigator.app.exitApp();" data-icon="delete"><a href="#" data-rel="close">Cerrar aplicación</a></li>
+                        <!-- COMENTADO POR FER VILLARRUEL 
+                        <li onClick="javascript:salir();" data-icon="delete"><a href="#" data-rel="close">Logout</a></li>-->
+                        <li onClick="javascript:refrescarListaPromociones(1, 0);"> <a href="#"> <span class="fa fa-home">&nbsp;&nbsp;</span> Regresar al inicio </a> </li>
+                        <li onClick="javascript:cambiarEstado();"> <a href="#location"><span class="fa fa-crosshairs">&nbsp;&nbsp;</span> Cambiar de estado </a> </li>
+                        <li class="buscaCercano" onClick="javascript:refrescarListaPromociones(categoriaSeleccionada, 1);"> <a href="#"><span class="fa fa-map-marker">&nbsp;&nbsp;</span>Buscar establecimientos <br/>
+                            <span style="margin-left:1em;">cercanos a mi posición</span></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--==========================================================================
+                                            DETALLE PROMOCION
+            ========================================================================== -->
+
+            <!--************************** Header **************************************** -->
+
+            <div  data-role="page" class="" id="descripcionpromocion" data-title="">
+                <div id="header">
+                    <div id="logo"> <a href="#panel"> <img src="css/img/logo.png"> </a> </div>
+                    <a id="ahead" href="#menu4" style=" color: #FFCC99 !important;" class="fa fa-bars fa-2x"><br>
+                        <span class="f14 c_ama">Menu</span>
+                    </a>
+                    <!-- COMENTADO POR FER VILLARRUEL 
+                    <a id="dpahead" href="#" style=" color: #FFCC99 !important;" onclick="javascript:anadirFavorito()" class="fa fa-star-o fa-2x"><br>
+                        <span id="lblahead" class="f14 c_ama">Añadir a favoritos</span>
+                    </a>-->
+                    <a id="asistencia" href="#asistenciaList" style=" color: #FFCC99 !important;" class="c_ama fa fa-heart-o fa-2x lmFavorito"><br>
+                        <span class="f14 c_ama">Asistencias</span>
+                    </a>
+                </div>
+
+                <!-- ************************** Busqueda ********************************* -->
+
+                <div id="search">
+                    <div id="busqueda">
+                        <input data-role="none" class="field srcMain" value="" type="text" placeholder="Restaurantes, Bares, Servicios, etc">
+                        <a data-role="none" value="Enhanced" class="btn-busqueda" type="button" onclick="filtrar()"> <span class="fa fa-search fa fa-lg c_ama"></span> </a> 
+                    </div>
+                </div>
+
+                <!-- ************************** Categorias ******************************* -->
+
+                <div id="navegacion">
+                    <ul>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(1, 0);"> <a id="abutton" href="#" class="fa ct1 fa-shopping-cart fa-lg"><br>
+                            <span class="f9">Tiendas</span> </a>
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(2, 0);"> <a id="abutton" href="#" class="fa ct2 fa-cutlery fa-lg"><br>
+                            <span class="f9">Bares & Restaurantes</span> </a>
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(3, 0);"> <a id="abutton" href="#" class="fa ct3 fa-users fa-lg"><br>
+                            <span class="f9">Servicios varios</span> </a> 
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(4, 0);"> <a id="abutton" href="#" class="fa ct4 fa-hospital-o fa-lg"><br>
+                            <span class="f9">Hoteles</span> </a> 
+                        </li>
+                        <div></div>
+                        <li id="item" onClick="javascript:refrescarListaPromociones(5, 0);"> <a id="abutton" href="#" class="fa ct5 fa-smile-o fa-lg"><br>
+                            <span class="f9">Entretenimiento</span> </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="red">
+
+                <!-- ************************** Regresar ************************************ -->
+
+                <div id="tituloRegresar" class="amarillo" onClick="javascript:refrescarListaPromociones(categoriaSeleccionada, 0);">
+                    <h2 class="f16 l_morado" style="text-shadow: none !important;  padding-left: 0.5em;"> <i class="fa fa-reply"></i> REGRESAR A LISTADO </h2>
+                </div>
+
+                <!-- ************************** Logo  ************************************ -->
+
+                <div role="main" class="" data-role="none" id="descLogo"> </div>
+
+                <!-- ************************* Galeria  ********************************** -->
+
+                <div role="main" class="" data-role="none" id="galeriaimg">
+                    <ul id="galeria_promocion" class="slideme">
+                    </ul>
+                </div>
+
+                <!-- ********************* Descripción y boton mapa  ********************* -->
+
+                <div role="main" class="" data-role="none" id="divDesc">
+                    <div role="main" class="" data-role="none" id="descProm"> </div>
+                        <div id="descMap" class="" data-role="none" role="main"> 
+                            <i class="fa fa-map-marker fa-3x"></i><br> ¿Como llegar? 
+                        </div>
+                    <div style="" role="main" class="" data-role="none" id="descEstab"> </div>
+                </div>
+
+                <!-- ************************** Menu  ************************************ -->
+
+                <div data-role="panel" data-position="right" data-position-fixed="true" data-display="overlay" data-theme="a" id="menu4">
+                    <ul data-role="listview">
+                        <li class="exitapp" onClick="javascript:navigator.app.exitApp();" data-icon="delete"><a href="#" data-rel="close">Cerrar aplicación</a></li>
+                        <!-- COMENTADO POR FER VILLARRUEL 
+                        <li onClick="javascript:salir();" data-icon="delete"><a href="#" data-rel="close">Logout</a></li>-->
+                        <li onClick="javascript:refrescarListaPromociones(1, 0);"> <a href="#"> <span class="fa fa-home">&nbsp;&nbsp;</span> Regresar al inicio </a> </li>
+                        <li onClick="javascript:cambiarEstado();"> <a href="#"><span class="fa fa-crosshairs">&nbsp;&nbsp;</span> Cambiar de estado </a> </li>
+                        <li class="buscaCercano" onClick="javascript:refrescarListaPromociones(categoriaSeleccionada, 1);"> <a href="#"><span class="fa fa-map-marker">&nbsp;&nbsp;</span>Buscar establecimientos <br/>
+                            <span style="margin-left:1em;">cercanos a mi posición</span></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ************************** Loadin  ************************************ -->
+            <div id="loading" style="display: none; position: fixed; z-index: 1000; top: 0; left: 0; height: 100%; width: 100%; background: rgba( 255, 255, 255, .8 ) url('http://i.stack.imgur.com/FhHRx.gif') 50% 50% no-repeat;"></div>  
+        <!--</div>
+    </div>-->
+    
+    <script src="cordova.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery.mobile-1.4.5.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/localstorage.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/promodetalle.js"></script>
+    <script src="js/promolista.js"></script>
+    <script src="js/destacadolista.js"></script>
+     <!-- COMENTADO POR FER VILLARRUEL <script src="js/destacadolista.js"></script>-->
+    <script src="js/slideme.js"></script>
+    <script src="js/ubicacion.js"s></script>
+    <script src="js/estado.js"></script>
+    <script src="js/filtros.js"></script>
+    <script src="js/facebook.js"></script>
+</body>
+</html>
